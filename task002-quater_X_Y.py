@@ -18,8 +18,7 @@ def is_number(value): # Определяет является ли строка 
 def correct_value(): # Позволяет ввести в строку только числовое значение
     result = input()
     while not is_number(result) or float(result) == 0:
-        result = input(
-            'Неверный ввод! Введите INT или FLOAT значение > или < 0: ')
+        result = input('Неверный ввод! Введите INT или FLOAT значение > или < 0: ')
     try:
         int(result)
         return int(result)
@@ -29,13 +28,13 @@ def correct_value(): # Позволяет ввести в строку толь�
 
 def get_number_of_quater(x, y): # Основная функция для поиска четверти
     result = 0
-    if (x > 0 and y > 0):
+    if x > 0 and y > 0:
         result = 1
-    elif (x > 0 and y < 0):
+    elif x > 0 and y < 0:
         result = 2
-    elif (x < 0 and y < 0):
+    elif x < 0 and y < 0:
         result = 3
-    elif (x < 0 and y > 0):
+    elif x < 0 and y > 0:
         result = 4
     return result
 
